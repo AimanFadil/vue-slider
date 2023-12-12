@@ -17,7 +17,7 @@
         <div class="container">
             <div class="slider-wrapper" tabindex="0">
 
-                <div class="item">
+                <div class="item" @mouseover="FermaScrollo" @mouseleave="IniziaScrollo">
                     <img :src="`./${slides[activeImage].image}`" alt="Spiderman" />
                     <div class="text">
                         <h3>{{slides[activeImage].title}}</h3>
@@ -55,6 +55,14 @@
                     </div>
                 </div>   
             </div>
+            <div class="posButton m-4">
+                <div class="row">
+                    <div class="col-12">
+                        <button class="btn-danger btn" @click="FermaScrollo">Ferma</button>    
+                    </div>
+                </div>   
+            </div>
+            
             
         </div>
     </div>

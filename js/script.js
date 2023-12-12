@@ -56,6 +56,10 @@ createApp({
             this.scrollo = setInterval(() => {
                 this.nxtImg()
             }, 2000);
+        },
+        FermaScrollo(){
+            clearInterval(this.scrollo);
+            this.scrollo = null
         }
 
     }
