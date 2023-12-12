@@ -35,16 +35,17 @@ createApp({
     },
     methods:{
         nxtImg(){
-            if(this.activeImage == this.slides[i].image -1){
-                this.activeImage == 0; 
+            if(this.activeImage == this.slides.length -1){
+                this.activeImage = 0; 
             }
             else{
                 this.activeImage++;
             }
+            
         },
         prevImg(){
             if(this.activeImage == 0){
-                this.activeImage == this.slides[i].image -1;
+                this.activeImage = this.slides.length -1;
             }
             else{
                 this.activeImage--;
