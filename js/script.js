@@ -3,6 +3,7 @@ const { createApp } = Vue;
 createApp({
     data(){
         return{
+            scrollo : null,
             activeImage: 0,
             slides : [
                 {
@@ -50,6 +51,11 @@ createApp({
             else{
                 this.activeImage--;
             }
+        },
+        IniziaScrollo(){
+            this.scrollo = setInterval(() => {
+                this.nxtImg()
+            }, 2000);
         }
 
     }
